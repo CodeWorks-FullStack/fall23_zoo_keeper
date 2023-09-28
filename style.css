@@ -1,0 +1,37 @@
+*{
+  user-select: none;
+}
+
+.animal-pen{
+  height: 40vh;
+  border: 3px solid black;
+}
+
+.animal{
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 0 4px black;
+  width: fit-content;
+}
+
+.bg-waterpark{
+  background-image: url(https://images.unsplash.com/photo-1628238996362-a90f37d35b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+}
+
+.bg-court{
+  background-image: url(https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2033&q=80);
+}
+
+.bg-futball{
+  background-image: url(https://images.unsplash.com/photo-1556056504-5c7696c4c28d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2176&q=80);
+}
+
+.background{
+  background-size: cover;
+  background-position: bottom;
+}
+
+.stats{
+  font-size: 2em;
+  font-weight: bold;
+}
