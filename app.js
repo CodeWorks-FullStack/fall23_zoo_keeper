@@ -19,7 +19,7 @@ const animals = [
 function feedKuzco() {
   const kuzco = animals.find(animal => animal.name == 'Kuzco')
   kuzco.hunger++
-  // console.log('Feeding Kuzco', kuzco);
+  console.log('Feeding Kuzco', kuzco);
   drawKuzco()
 }
 
@@ -39,8 +39,24 @@ function feedAnimal(animalName) {
     return
   }
   // foundAnimal.hunger += 5
+  // if (foundAnimal.hunger >= 100) {
+  //   return
+  // }
+
+  // if (foundAnimal.hunger < 100) {
+  //   foundAnimal.hunger++
+  // }
+
   foundAnimal.hunger++
+
+  // NOTE clamp!
+  if (foundAnimal.hunger >= 100) {
+    foundAnimal.hunger = 100
+  }
+
   console.log('feeding animal', foundAnimal);
+  // REVIEW creates a brand new interval every time feedAnimal is called
+  // setInterval(animalsHungerDecreases, 2000)
   drawAnimals()
 }
 
@@ -56,4 +72,26 @@ function drawAnimals() {
   })
 }
 
+function animalsHungerDecreases() {
+  // animals.forEach((animal, index) => {
+  //   if (index % 2 == 0) {
+  //     animal.hunger -= 5
+  //   }
+  //   else {
+  //     animal.hunger--
+  //   }
+  // })
+
+  animals.forEach(animal => animal.hunger--)
+  drawAnimals()
+}
+
+
+// function runCallbackFunction(func) {
+//   console.log('running!');
+//   func()
+// }
+// setInterval(() => { console.log('jeremy is cool') }, 1000)
+
 drawAnimals()
+setInterval(animalsHungerDecreases, 2000)
